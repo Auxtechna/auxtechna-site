@@ -870,6 +870,9 @@
             <p class="section-sub">Interested in a demonstration? Complete the form and we'll be in touch.</p>
 
             <form id="contactForm" class="contact-form" novalidate>
+                <input type="hidden" name="_subject" value="New demo request from Auxtechna website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
                 <div class="form-group">
                     <label for="name">Name <span style="color:#dc2626">*</span></label>
                     <input type="text" id="name" name="name" required>
@@ -1004,7 +1007,6 @@
                 e.preventDefault();
 
                 if (!form.checkValidity()) {
-                    // Basic visual feedback for required fields
                     form.querySelectorAll(':invalid').forEach(function (el) {
                         el.style.borderColor = '#dc2626';
                     });
@@ -1014,13 +1016,28 @@
                 btn.disabled = true;
                 btn.innerHTML = '<i class="bi bi-arrow-repeat" style="animation: spin 1s linear infinite; display: inline-block;"></i> Sending...';
 
-                // Simulate submission (replace with actual endpoint)
-                setTimeout(function () {
-                    showToast('Thank you! Your request has been received. We\'ll be in touch shortly.', true);
-                    form.reset();
+                // Send via Formsubmit.co → alex.jennings@homecareconnects.co.uk
+                var data = new FormData(form);
+                fetch('https://formsubmit.co/ajax/alex.jennings@homecareconnects.co.uk', {
+                    method: 'POST',
+                    body: data
+                })
+                .then(function (res) { return res.json(); })
+                .then(function (result) {
+                    if (result.success) {
+                        showToast('Thank you! Your request has been received. We\'ll be in touch shortly.', true);
+                        form.reset();
+                    } else {
+                        showToast('Something went wrong. Please email us directly at alex.jennings@homecareconnects.co.uk', false);
+                    }
                     btn.disabled = false;
                     btn.innerHTML = '<i class="bi bi-send"></i> Send Request';
-                }, 800);
+                })
+                .catch(function () {
+                    showToast('Something went wrong. Please email us directly at alex.jennings@homecareconnects.co.uk', false);
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="bi bi-send"></i> Send Request';
+                });
             });
 
             // Reset border on focus
