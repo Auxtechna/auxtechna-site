@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" width="260" height="60">
+  <!-- Outer 6 nodes -->
+  <circle cx="28" cy="4"  r="5" fill="#1565C0" opacity="0.35"/>
+  <circle cx="48" cy="15" r="5" fill="#1565C0" opacity="0.35"/>
+  <circle cx="48" cy="37" r="5" fill="#1565C0" opacity="0.35"/>
+  <circle cx="28" cy="48" r="5" fill="#1565C0" opacity="0.35"/>
+  <circle cx="8"  cy="37" r="5" fill="#1565C0" opacity="0.35"/>
+  <circle cx="8"  cy="15" r="5" fill="#1565C0" opacity="0.35"/>
+  <!-- Connector lines -->
+  <line x1="28" y1="9"  x2="28" y2="22" stroke="#1565C0" stroke-width="1.2" opacity="0.25"/>
+  <line x1="28" y1="43" x2="28" y2="30" stroke="#1565C0" stroke-width="1.2" opacity="0.25"/>
+  <line x1="11" y1="17" x2="22" y2="23" stroke="#1565C0" stroke-width="1.2" opacity="0.25"/>
+  <line x1="45" y1="17" x2="34" y2="23" stroke="#1565C0" stroke-width="1.2" opacity="0.25"/>
+  <line x1="11" y1="35" x2="22" y2="29" stroke="#1565C0" stroke-width="1.2" opacity="0.25"/>
+  <line x1="45" y1="35" x2="34" y2="29" stroke="#1565C0" stroke-width="1.2" opacity="0.25"/>
+  <!-- Centre circle -->
+  <circle cx="28" cy="26" r="14" fill="#1565C0"/>
+  <circle cx="28" cy="26" r="8"  fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+  <circle cx="28" cy="26" r="4"  fill="white"/>
+  <circle cx="28" cy="26" r="2"  fill="#1565C0"/>
+  <!-- Wordmark -->
+  <text x="70" y="34"
+        font-family="Arial, sans-serif"
+        font-weight="700"
+        font-size="34"
+        letter-spacing="-0.5">
+    <tspan fill="#1565C0">PGD</tspan><tspan fill="#1A2E4A"> Hub</tspan>
+  </text>
+  <text x="71" y="52"
+        font-family="Arial, sans-serif"
+        font-weight="400"
+        font-size="10"
+        letter-spacing="2.5"
+        fill="#3A5A8A">PATIENT GROUP DIRECTION</text>
+</svg>

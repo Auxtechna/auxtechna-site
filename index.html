@@ -339,19 +339,15 @@
             border: 1px solid #ddd6fe;
         }
 
-        .product-card .product-icon {
-            width: 72px;
-            height: 72px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+        .product-card .product-logo {
+            margin-bottom: 1.25rem;
         }
 
-        .product-card.hcc .product-icon { background: var(--ax-blue); color: #fff; }
-        .product-card.pgd .product-icon { background: var(--ax-purple); color: #fff; }
+        .product-card .product-logo img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
 
         .product-card .product-label {
             font-size: 0.75rem;
@@ -363,13 +359,6 @@
 
         .product-card.hcc .product-label { color: var(--ax-blue); }
         .product-card.pgd .product-label { color: var(--ax-purple); }
-
-        .product-card h3 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--ax-navy);
-            margin-bottom: 0.75rem;
-        }
 
         .product-card .product-desc {
             color: var(--ax-dark-grey);
@@ -780,9 +769,10 @@
 
             <div class="product-cards">
                 <a href="https://homecareconnects.co.uk" target="_blank" class="product-card hcc">
-                    <div class="product-icon"><i class="bi bi-prescription2"></i></div>
+                    <div class="product-logo">
+                        <img src="/images/homecare-connects-logo.png" alt="HomeCare Connects" height="50">
+                    </div>
                     <div class="product-label">Homecare Prescribing &amp; Management</div>
-                    <h3>HomeCare Connects</h3>
                     <p class="product-desc">
                         A complete digital ecosystem for NHS homecare prescribing &mdash; from consultant clinic to
                         patient's front door. Connects prescribers, pharmacy teams, homecare suppliers, and patients
@@ -804,9 +794,10 @@
                 </a>
 
                 <a href="https://patientgroupdirection.co.uk" target="_blank" class="product-card pgd">
-                    <div class="product-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                    <div class="product-logo">
+                        <img src="/images/pgdhub-logo.svg" alt="PGD Hub" height="50">
+                    </div>
                     <div class="product-label">PGD Governance &amp; Compliance</div>
-                    <h3>PGD Hub</h3>
                     <p class="product-desc">
                         A purpose-built governance platform for Patient Group Directions &mdash; replacing Word documents,
                         paper signatures, and spreadsheet tracking with a single CQC-ready digital system.
