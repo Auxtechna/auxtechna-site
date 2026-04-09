@@ -466,6 +466,107 @@
             margin: 0;
         }
 
+        /* --- Bespoke Development --- */
+        .bespoke {
+            padding: 5rem 1rem;
+            background: #fff;
+        }
+
+        .bespoke h2 {
+            text-align: center;
+            color: var(--ax-navy);
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .bespoke .section-sub {
+            text-align: center;
+            color: var(--ax-dark-grey);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bespoke-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bespoke-text p {
+            color: var(--ax-dark-grey);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .bespoke-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .bespoke-feature {
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+            padding: 1.25rem;
+            background: var(--ax-pale);
+            border-radius: 10px;
+            border: 1px solid var(--ax-border);
+        }
+
+        .bespoke-feature > i {
+            font-size: 1.3rem;
+            color: var(--ax-teal);
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .bespoke-feature strong {
+            display: block;
+            color: var(--ax-navy);
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .bespoke-feature span {
+            color: var(--ax-dark-grey);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .bespoke-cta {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .btn-bespoke {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--ax-teal);
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-bespoke:hover {
+            background: #00796B;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .bespoke-features { grid-template-columns: 1fr; }
+        }
+
         /* --- Contact --- */
         .contact {
             padding: 5rem 1rem;
@@ -675,6 +776,7 @@
             </a>
             <div class="nav-links">
                 <a href="#products">Products</a>
+                <a href="#bespoke">Bespoke</a>
                 <a href="#about">About</a>
                 <a href="#contact" class="btn-contact">Get In Touch</a>
             </div>
@@ -854,6 +956,69 @@
         </div>
     </section>
 
+    <!-- Bespoke Development -->
+    <section class="bespoke" id="bespoke">
+        <div class="container">
+            <h2>Bespoke Clinical &amp; Operational Systems</h2>
+            <p class="section-sub">
+                Need something beyond our standard products? We design and build bespoke digital systems
+                from the ground up &mdash; tailored to your organisation's unique clinical and operational workflows.
+            </p>
+
+            <div class="bespoke-content">
+                <div class="bespoke-text">
+                    <p>
+                        Every healthcare organisation has processes that don't fit neatly into off-the-shelf software.
+                        Whether it's a specialist clinical pathway, a complex operational workflow, or a governance
+                        system unique to your service &mdash; we can build it.
+                    </p>
+                    <p>
+                        Our approach starts with understanding how your teams actually work. We design intuitive
+                        interfaces that mirror real workflows, not the other way around. The result is software
+                        your staff want to use, not software they're forced to use.
+                    </p>
+
+                    <div class="bespoke-features">
+                        <div class="bespoke-feature">
+                            <i class="bi bi-pencil-square"></i>
+                            <div>
+                                <strong>Designed around your workflows</strong>
+                                <span>We map your processes first, then build software that fits &mdash; not the other way around</span>
+                            </div>
+                        </div>
+                        <div class="bespoke-feature">
+                            <i class="bi bi-shield-lock"></i>
+                            <div>
+                                <strong>NHS-grade security &amp; compliance</strong>
+                                <span>GDPR, DSPT, clinical safety standards, and full audit trails built in from day one</span>
+                            </div>
+                        </div>
+                        <div class="bespoke-feature">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <div>
+                                <strong>Scalable &amp; future-proof</strong>
+                                <span>Cloud-hosted, multi-tenant architecture that grows with your organisation</span>
+                            </div>
+                        </div>
+                        <div class="bespoke-feature">
+                            <i class="bi bi-people"></i>
+                            <div>
+                                <strong>Intuitive by design</strong>
+                                <span>Clean, modern interfaces that require minimal training and maximise adoption</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="bespoke-cta">
+                        <a href="#contact" class="btn-bespoke">
+                            <i class="bi bi-chat-dots me-1"></i> Discuss Your Requirements
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
@@ -893,10 +1058,11 @@
                 <div class="form-group">
                     <label for="interest">I'm interested in <span style="color:#dc2626">*</span></label>
                     <select id="interest" name="interest" required>
-                        <option value="">Select a product</option>
+                        <option value="">Select an option</option>
                         <option value="hcc">HomeCare Connects</option>
                         <option value="pgd">PGD Hub</option>
                         <option value="both">Both Products</option>
+                        <option value="bespoke">Bespoke Development</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -921,7 +1087,7 @@
                     <p>Digital healthcare platforms built for the NHS.<br>
                        Secure, auditable, and designed around real clinical workflows.</p>
                     <p style="margin-top: 1rem;">
-                        <a href="mailto:info@auxtechna.co.uk" style="color: rgba(255,255,255,0.9); text-decoration: none;">
+                        <a href="mailto:info@auxtechna.co.uk" style="color: var(--ax-dark-grey); text-decoration: none;">
                             <i class="bi bi-envelope me-1"></i> info@auxtechna.co.uk
                         </a>
                     </p>
@@ -931,6 +1097,7 @@
                     <ul class="footer-links">
                         <li><a href="https://homecareconnects.co.uk" target="_blank">HomeCare Connects</a></li>
                         <li><a href="https://patientgroupdirection.co.uk" target="_blank">PGD Hub</a></li>
+                        <li><a href="#bespoke">Bespoke Development</a></li>
                     </ul>
                 </div>
                 <div>
