@@ -334,9 +334,19 @@
             border: 1px solid #bfdbfe;
         }
 
+        .product-card.hcd {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            border: 1px solid #fed7aa;
+        }
+
         .product-card.pgd {
             background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
             border: 1px solid #ddd6fe;
+        }
+
+        .product-card.medicase {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 1px solid #a7f3d0;
         }
 
         .product-card .product-logo {
@@ -358,7 +368,9 @@
         }
 
         .product-card.hcc .product-label { color: var(--ax-blue); }
+        .product-card.hcd .product-label { color: #c2410c; }
         .product-card.pgd .product-label { color: var(--ax-purple); }
+        .product-card.medicase .product-label { color: var(--ax-teal); }
 
         .product-card .product-desc {
             color: var(--ax-dark-grey);
@@ -384,7 +396,9 @@
 
         .product-features li i { font-size: 1rem; }
         .product-card.hcc .product-features li i { color: var(--ax-blue); }
+        .product-card.hcd .product-features li i { color: #c2410c; }
         .product-card.pgd .product-features li i { color: var(--ax-purple); }
+        .product-card.medicase .product-features li i { color: var(--ax-teal); }
 
         .product-card .product-link {
             font-weight: 700;
@@ -396,7 +410,66 @@
         }
 
         .product-card.hcc .product-link { color: var(--ax-blue); }
+        .product-card.hcd .product-link { color: #c2410c; }
         .product-card.pgd .product-link { color: var(--ax-purple); }
+        .product-card.medicase .product-link { color: var(--ax-teal); }
+
+        /* Brand mark for product cards without a logo image (HCD, MediCase) */
+        .product-brand-mark {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.25rem;
+            min-height: 50px;
+        }
+
+        .product-brand-mark .mark-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .product-card.hcd .mark-icon { background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); }
+        .product-card.medicase .mark-icon { background: linear-gradient(135deg, var(--ax-teal-light) 0%, var(--ax-teal) 100%); }
+
+        .product-brand-mark .mark-name {
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--ax-text);
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+
+        .product-brand-mark .mark-tag {
+            font-size: 0.75rem;
+            color: var(--ax-mid-grey);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 0.15rem;
+        }
+
+        /* Inline secondary CTA inside a product card (e.g. student access link) */
+        .product-secondary-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-left: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--ax-dark-grey);
+            text-decoration: none;
+        }
+
+        .product-secondary-link:hover {
+            color: var(--ax-teal);
+        }
 
         .product-card:hover .product-link { gap: 0.75rem; }
 
@@ -868,7 +941,7 @@
     <section class="products" id="products">
         <div class="container">
             <h2>Our Products</h2>
-            <p class="section-sub">Two platforms tackling real, unresolved problems inside NHS pharmacy and governance teams.</p>
+            <p class="section-sub">Four platforms tackling real, unresolved problems across NHS clinical practice and pharmacy education.</p>
 
             <div class="product-cards">
                 <a href="https://homecareconnects.co.uk" target="_blank" class="product-card hcc">
@@ -896,6 +969,35 @@
                     </div>
                 </a>
 
+                <a href="https://trusts.homecareconnects.co.uk" target="_blank" class="product-card hcd">
+                    <div class="product-brand-mark">
+                        <div class="mark-icon"><i class="bi bi-building-fill"></i></div>
+                        <div>
+                            <div class="mark-name">HCD Trust Portal</div>
+                            <div class="mark-tag">High Cost Drugs</div>
+                        </div>
+                    </div>
+                    <div class="product-label">Cross-ICB Visibility for NHS Trusts</div>
+                    <p class="product-desc">
+                        Trusts that commission high-cost drugs across multiple ICBs see every assurance record
+                        in one login. Auto-routing by GP ODS code, per-trust API keys for EPR vendors, and
+                        manual record entry when no EPR is available. Built for the trusts, hosted by us.
+                    </p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Single login across every commissioning ICB</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Auto-routing by GP ODS code</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Per-trust API key for EPR integration</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Manual record entry workflow</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Outbound webhooks for downstream systems</li>
+                        <li><i class="bi bi-check-circle-fill"></i> NHS CIS2 single sign-on</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Per-trust rate limits &amp; audit log</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Daily reconciliation against ICB records</li>
+                    </ul>
+                    <div class="product-link">
+                        Visit trusts.homecareconnects.co.uk <i class="bi bi-arrow-right"></i>
+                    </div>
+                </a>
+
                 <a href="https://patientgroupdirection.co.uk" target="_blank" class="product-card pgd">
                     <div class="product-logo">
                         <img src="/images/pgdhub-logo.svg" alt="PGD Hub" height="50">
@@ -918,6 +1020,35 @@
                     </ul>
                     <div class="product-link">
                         Visit patientgroupdirection.co.uk <i class="bi bi-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="https://students.auxtechna.co.uk" target="_blank" class="product-card medicase">
+                    <div class="product-brand-mark">
+                        <div class="mark-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                        <div>
+                            <div class="mark-name">MediCase</div>
+                            <div class="mark-tag">Training Prescribing</div>
+                        </div>
+                    </div>
+                    <div class="product-label">Prescribing Education for Universities &amp; Students</div>
+                    <p class="product-desc">
+                        A multi-tenant simulator for pharmacy and medical schools. Curated case studies, an
+                        EPMA-style prescribing chart, and live classroom mode. Each university gets its own
+                        branded subdomain. Individual students can sign up directly with a monthly subscription.
+                    </p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Curated case-study library</li>
+                        <li><i class="bi bi-check-circle-fill"></i> EPMA-style prescribing chart with allergies, CDs &amp; witness sign-off</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Live classroom mode (six-character join code)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Branded subdomain per institution</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Educator authoring &amp; sharing</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Per-student progress &amp; scoring</li>
+                        <li><i class="bi bi-check-circle-fill"></i> GDPR-aligned, UK hosted</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Annual institutional licence (no per-seat charge)</li>
+                    </ul>
+                    <div class="product-link">
+                        Student access: students.auxtechna.co.uk <i class="bi bi-arrow-right"></i>
                     </div>
                 </a>
             </div>
@@ -1053,6 +1184,9 @@
                         <option value="nurse">Nurse / Practitioner</option>
                         <option value="governance">Medicines Governance</option>
                         <option value="homecare-lead">Homecare Lead</option>
+                        <option value="hcd-lead">High-Cost Drugs Lead</option>
+                        <option value="university">University Lecturer / Faculty</option>
+                        <option value="student">Student / Trainee</option>
                         <option value="it">IT / Digital</option>
                         <option value="procurement">Procurement</option>
                         <option value="other">Other</option>
@@ -1063,8 +1197,10 @@
                     <select id="interest" name="interest" required>
                         <option value="">Select an option</option>
                         <option value="hcc">HomeCare Connects</option>
+                        <option value="hcd">HCD Trust Portal</option>
                         <option value="pgd">PGD Hub</option>
-                        <option value="both">Both Products</option>
+                        <option value="medicase">MediCase (Training Prescribing)</option>
+                        <option value="multiple">Multiple products</option>
                         <option value="bespoke">Bespoke Development</option>
                     </select>
                 </div>
@@ -1099,7 +1235,9 @@
                     <h6>Products</h6>
                     <ul class="footer-links">
                         <li><a href="https://homecareconnects.co.uk" target="_blank">HomeCare Connects</a></li>
+                        <li><a href="https://trusts.homecareconnects.co.uk" target="_blank">HCD Trust Portal</a></li>
                         <li><a href="https://patientgroupdirection.co.uk" target="_blank">PGD Hub</a></li>
+                        <li><a href="https://students.auxtechna.co.uk" target="_blank">MediCase (students)</a></li>
                         <li><a href="#bespoke">Bespoke Development</a></li>
                     </ul>
                 </div>
