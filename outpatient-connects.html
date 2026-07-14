@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpatient Connects | Auxtechna</title>
+    <meta name="description" content="Electronic NHS outpatient prescribing: sign once at prescribing, route each medicine to its most cost-effective supply channel over national NHS EPS or hospital pharmacy, with a built-in pharmacist clinical check.">
+    <link rel="icon" type="image/png" href="/images/auxtechna-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --ax-navy: #0a1628;
+            --ax-green: #0b6b3a;
+            --ax-green-light: #12894a;
+            --ax-dark-grey: #334155;
+            --ax-mid-grey: #64748b;
+            --ax-pale: #f0f6f2;
+            --ax-border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; color: #1e293b; line-height: 1.6; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+        a { text-decoration: none; }
+
+        /* Nav */
+        .nav { background: #fff; border-bottom: 1px solid var(--ax-border); position: sticky; top: 0; z-index: 50; }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .nav .logo img { height: 30px; width: auto; }
+        .nav .nav-actions { display: flex; align-items: center; gap: 1.5rem; }
+        .nav .back { color: var(--ax-mid-grey); font-weight: 600; font-size: 0.95rem; }
+        .nav .back:hover { color: var(--ax-green); }
+        .nav .btn { background: var(--ax-green); color: #fff; padding: 0.5rem 1.25rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; }
+        .nav .btn:hover { background: var(--ax-green-light); }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--ax-navy) 0%, #0d2a1c 45%, var(--ax-green) 100%); color: #fff; padding: 5rem 0 4.5rem; text-align: center; }
+        .hero img { height: 76px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.2rem; max-width: 720px; margin: 0 auto 2rem; opacity: 0.92; }
+        .hero .btn { background: #fff; color: var(--ax-green); font-weight: 700; padding: 0.8rem 2.25rem; border-radius: 6px; display: inline-block; font-size: 1.05rem; transition: transform .15s; }
+        .hero .btn:hover { transform: translateY(-2px); }
+
+        /* Sections */
+        section.block { padding: 4.5rem 0; }
+        section.block.alt { background: var(--ax-pale); }
+        .section-head { text-align: center; margin-bottom: 3rem; }
+        .section-head h2 { font-size: 2rem; font-weight: 800; color: var(--ax-green); margin-bottom: 0.5rem; }
+        .section-head p { color: var(--ax-mid-grey); font-size: 1.05rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .card { background: #fff; border: 1px solid var(--ax-border); border-radius: 12px; padding: 1.75rem; transition: box-shadow .2s, transform .2s; }
+        .card:hover { box-shadow: 0 8px 28px rgba(11,107,58,0.10); transform: translateY(-3px); }
+        .card .ic { width: 52px; height: 52px; border-radius: 12px; background: #e6f5ec; color: var(--ax-green); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem; }
+        .card h5 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .card p { color: var(--ax-dark-grey); font-size: 0.95rem; }
+
+        .steps { max-width: 760px; margin: 0 auto; }
+        .steps li { margin-bottom: 1.1rem; font-size: 1.05rem; padding-left: 0.25rem; }
+        .steps li strong { color: var(--ax-green); }
+
+        /* CTA + footer */
+        .cta { background: var(--ax-green); color: #fff; text-align: center; padding: 4rem 0; }
+        .cta h2 { font-size: 1.9rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta p { opacity: 0.95; max-width: 620px; margin: 0 auto 1.5rem; }
+        .cta .btn { background: #fff; color: var(--ax-green); font-weight: 700; padding: 0.8rem 2.25rem; border-radius: 6px; display: inline-block; }
+        footer { background: var(--ax-navy); color: #cbd5e1; text-align: center; padding: 2rem 0; font-size: 0.9rem; }
+
+        @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+        <a href="/" class="logo"><img src="/images/auxtechna-logo.svg" alt="Auxtechna" onerror="this.src='/images/auxtechna-logo.png'"></a>
+        <div class="nav-actions">
+            <a href="/#products" class="back"><i class="bi bi-arrow-left"></i> All products</a>
+            <a href="https://demo.homecareconnects.co.uk/Account/Login" class="btn">Sign in</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <img src="/images/outpatient-connects-logo.svg" alt="Outpatient Connects">
+        <h1>Outpatient prescribing, done properly</h1>
+        <p>
+            A purpose-built platform for NHS outpatient medicines: prescribe from a wide dm+d formulary,
+            sign once at the point of prescribing, and send each medicine down its most cost-effective supply
+            route &mdash; the patient's community pharmacy over national NHS EPS, or the hospital's own pharmacy
+            &mdash; with a pharmacist clinical check built in.
+        </p>
+        <a href="/#contact" class="btn">Request a demonstration</a>
+    </div>
+</header>
+
+<section class="block">
+    <div class="container">
+        <div class="section-head">
+            <h2>Why Outpatient Connects?</h2>
+            <p>Everything a trust needs to prescribe, check and route outpatient medicines electronically</p>
+        </div>
+        <div class="grid">
+            <div class="card"><div class="ic"><i class="bi bi-pen"></i></div><h5>Sign once, at prescribing</h5><p>The prescriber signs at the point of prescribing with an advanced electronic signature; the content is SHA-256 locked, so it's tamper-evident from the moment it's created. No separate signing step.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-send-check"></i></div><h5>National NHS EPS routing</h5><p>Community-routed prescriptions transmit to the patient's nominated pharmacy over the national Electronic Prescription Service &mdash; built on the same CIS2 / PDS / FHIR foundations as HomeCare Connects.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-cash-coin"></i></div><h5>Cost-effective supply routing</h5><p>A pricing engine compares the real cost of each supply route &mdash; national Drug Tariff for the community, the trust's own contract prices for the hospital pharmacy &mdash; and recommends the cheapest, showing the pounds saved on every prescription.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-capsule"></i></div><h5>Generic-first, wider formulary</h5><p>Prescribe generically from a wide dm+d-backed formulary (substance &rarr; strength &rarr; form), with brand an optional pick. Each site chooses its formulary mode: its own curated list, the full dm+d catalogue, or a hybrid.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-clipboard2-check"></i></div><h5>Pharmacist clinical check</h5><p>A pharmacist reviews the prescription and passes-and-sends in one action, or sends it back to the prescriber with a query. The prescriber can amend and re-sign in place &mdash; a clean, closed loop with no paper.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-shield-check"></i></div><h5>Safety flags where they matter</h5><p>Allergy checks, dose-range guards, an off-formulary-dose alert that forces a clinical check, and a clear "unlicensed medicine" badge at both prescribing and checking &mdash; the right warning in front of the right person.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-graph-up-arrow"></i></div><h5>Titration &amp; dose escalation</h5><p>Structured dose-escalation schedules for drugs that titrate &mdash; each step's dose, frequency and duration held against the drug, so an escalating regimen is prescribed faithfully rather than as free text.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-arrow-repeat"></i></div><h5>Repeat medicines</h5><p>A patient repeat-medicines list with a specialty-scoped worklist that shows what's due &mdash; overdue and soonest first &mdash; and re-issues a fresh, signed prescription in a click.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-clipboard2-pulse"></i></div><h5>Prescribe by diagnosis</h5><p>Curated order sets tied to a diagnosis drop a whole bundle of pre-configured drug lines into the prescription, editable before signing &mdash; faster, more consistent prescribing for common presentations.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-person-badge"></i></div><h5>NHS identity &amp; demographics</h5><p>Prescriber identity and MFA via NHS CIS2; patient demographics and registered GP verified from PDS. The people and the patient are who the record says they are.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-hospital"></i></div><h5>Multi-specialty, per-consultant</h5><p>Prescribing organisation ODS per specialty, per-specialty days-supply defaults, and specialty-scoped repeats and workflow filters &mdash; each clinic sees and manages its own patients.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-bag-check"></i></div><h5>Hospital dispensing workflow</h5><p>Medicines routed to the hospital's own pharmacy land in a dispensing worklist, so non-EPS supply is tracked to completion alongside the community prescriptions &mdash; one view of the whole outpatient supply picture.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="block alt">
+    <div class="container">
+        <div class="section-head"><h2>How a prescription flows</h2></div>
+        <ol class="steps">
+            <li><strong>Prescribe</strong> from the formulary (generic-first), with dose, quantity or days, and the cheapest supply route suggested automatically.</li>
+            <li><strong>Sign once</strong> &mdash; the prescription is AES-signed and locked at the click.</li>
+            <li><strong>Clinical check</strong> &mdash; a pharmacist reviews and passes it, or sends it back for amendment.</li>
+            <li><strong>Route &amp; supply</strong> &mdash; community items transmit over NHS EPS to the nominated pharmacy; hospital items drop into the dispensing worklist.</li>
+        </ol>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>See Outpatient Connects for your Trust</h2>
+        <p>Part of the Auxtechna platform, alongside HomeCare Connects. Get in touch and we'll arrange a demonstration.</p>
+        <a href="/#contact" class="btn">Request a demonstration</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">&copy; <span id="yr"></span> Auxtechna. Outpatient Connects and HomeCare Connects are products of Auxtechna.</div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 84" width="300" height="84">
+  <!-- Node cluster badge (shared "Connects" family motif, green), sized to match the
+       HomeCare Connects logo weight: ~3.57:1 aspect so it renders at the same tile size. -->
+  <g transform="translate(6,12)">
+    <circle cx="30" cy="4"  r="5.5" fill="#059669" opacity="0.35"/>
+    <circle cx="52" cy="16" r="5.5" fill="#059669" opacity="0.35"/>
+    <circle cx="52" cy="44" r="5.5" fill="#059669" opacity="0.35"/>
+    <circle cx="30" cy="56" r="5.5" fill="#059669" opacity="0.35"/>
+    <circle cx="8"  cy="44" r="5.5" fill="#059669" opacity="0.35"/>
+    <circle cx="8"  cy="16" r="5.5" fill="#059669" opacity="0.35"/>
+    <line x1="30" y1="9.5"  x2="30" y2="24" stroke="#059669" stroke-width="1.3" opacity="0.25"/>
+    <line x1="30" y1="50.5" x2="30" y2="36" stroke="#059669" stroke-width="1.3" opacity="0.25"/>
+    <line x1="11" y1="18" x2="24" y2="26" stroke="#059669" stroke-width="1.3" opacity="0.25"/>
+    <line x1="49" y1="18" x2="36" y2="26" stroke="#059669" stroke-width="1.3" opacity="0.25"/>
+    <line x1="11" y1="42" x2="24" y2="34" stroke="#059669" stroke-width="1.3" opacity="0.25"/>
+    <line x1="49" y1="42" x2="36" y2="34" stroke="#059669" stroke-width="1.3" opacity="0.25"/>
+    <!-- Centre badge + medical plus -->
+    <circle cx="30" cy="30" r="16" fill="#059669"/>
+    <path d="M30 22v16M22 30h16" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round"/>
+  </g>
+  <!-- Stacked wordmark, bold, sized to fill the canvas like the HomeCare Connects
+       logo so it renders at the same visual weight at the tile's max-height. -->
+  <text x="76" y="38"
+        font-family="Arial, sans-serif" font-weight="700" font-size="34"
+        letter-spacing="-1" fill="#047857">Outpatient</text>
+  <text x="76" y="74"
+        font-family="Arial, sans-serif" font-weight="700" font-size="34"
+        letter-spacing="-1" fill="#1A2E4A">Connects</text>
+</svg>

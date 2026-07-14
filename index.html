@@ -16,6 +16,8 @@
             --ax-teal-light: #4DB6AC;
             --ax-purple: #7c3aed;
             --ax-purple-light: #a78bfa;
+            --ax-green: #0b6b3a;
+            --ax-green-light: #12894a;
             --ax-pale: #f0f4f8;
             --ax-border: #e2e8f0;
             --ax-mid-grey: #94a3b8;
@@ -349,6 +351,11 @@
             border: 1px solid #a7f3d0;
         }
 
+        .product-card.opc {
+            background: linear-gradient(135deg, #ecfdf3 0%, #d5f3e2 100%);
+            border: 1px solid #a7e8c4;
+        }
+
         .product-card .product-logo {
             margin-bottom: 1.25rem;
         }
@@ -371,6 +378,7 @@
         .product-card.hcd .product-label { color: #c2410c; }
         .product-card.pgd .product-label { color: var(--ax-purple); }
         .product-card.medicase .product-label { color: var(--ax-teal); }
+        .product-card.opc .product-label { color: var(--ax-green); }
 
         .product-card .product-desc {
             color: var(--ax-dark-grey);
@@ -399,6 +407,7 @@
         .product-card.hcd .product-features li i { color: #c2410c; }
         .product-card.pgd .product-features li i { color: var(--ax-purple); }
         .product-card.medicase .product-features li i { color: var(--ax-teal); }
+        .product-card.opc .product-features li i { color: var(--ax-green); }
 
         .product-card .product-link {
             font-weight: 700;
@@ -413,6 +422,7 @@
         .product-card.hcd .product-link { color: #c2410c; }
         .product-card.pgd .product-link { color: var(--ax-purple); }
         .product-card.medicase .product-link { color: var(--ax-teal); }
+        .product-card.opc .product-link { color: var(--ax-green); }
 
         /* Brand mark for product cards without a logo image (HCD, MediCase) */
         .product-brand-mark {
@@ -969,6 +979,32 @@
                     </div>
                 </a>
 
+                <a href="/outpatient-connects.html" class="product-card opc">
+                    <div class="product-logo">
+                        <img src="/images/outpatient-connects-logo.svg" alt="Outpatient Connects" height="50">
+                    </div>
+                    <div class="product-label">Outpatient Prescribing &amp; EPS</div>
+                    <p class="product-desc">
+                        Electronic prescribing for NHS outpatient clinics. Prescribe from a wide dm+d formulary,
+                        sign once at the point of prescribing, and route each medicine to its most cost-effective
+                        supply channel &mdash; the patient's community pharmacy over national NHS EPS, or the
+                        hospital's own pharmacy &mdash; with a pharmacist clinical check built in.
+                    </p>
+                    <ul class="product-features">
+                        <li><i class="bi bi-check-circle-fill"></i> EPS-routed to the patient's community pharmacy</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cost-effective supply routing (Drug Tariff vs contract)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sign once at prescribing (AES, SHA-256 locked)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Generic-first dm+d formulary</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Pharmacist clinical check &amp; send-back</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Dose ranges, titration &amp; unlicensed-med flags</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Repeat medicines &amp; prescribe-by-diagnosis</li>
+                        <li><i class="bi bi-check-circle-fill"></i> CIS2 &amp; PDS integrated</li>
+                    </ul>
+                    <div class="product-link">
+                        Explore Outpatient Connects <i class="bi bi-arrow-right"></i>
+                    </div>
+                </a>
+
                 <a href="https://trusts.homecareconnects.co.uk" target="_blank" class="product-card hcd">
                     <div class="product-logo">
                         <img src="/images/hcd-recreo-logo.svg" alt="HCD Recreo — High-Cost Drug Assurance" height="50">
@@ -1019,7 +1055,7 @@
                     </div>
                 </a>
 
-                <a href="https://students.auxtechna.co.uk" target="_blank" class="product-card medicase">
+                <a href="https://training-app-production-508c.up.railway.app" target="_blank" class="product-card medicase">
                     <div class="product-brand-mark">
                         <div class="mark-icon"><i class="bi bi-mortarboard-fill"></i></div>
                         <div>
@@ -1046,7 +1082,7 @@
                         <li><i class="bi bi-check-circle-fill"></i> Annual institutional licence (no per-seat charge)</li>
                     </ul>
                     <div class="product-link">
-                        Student access: students.auxtechna.co.uk <i class="bi bi-arrow-right"></i>
+                        Access MediCase <i class="bi bi-arrow-right"></i>
                     </div>
                 </a>
             </div>
@@ -1235,7 +1271,7 @@
                         <li><a href="https://homecareconnects.co.uk" target="_blank">HomeCare Connects</a></li>
                         <li><a href="https://trusts.homecareconnects.co.uk" target="_blank">HCD Recreo</a></li>
                         <li><a href="https://patientgroupdirection.co.uk" target="_blank">PGD Hub</a></li>
-                        <li><a href="https://students.auxtechna.co.uk" target="_blank">MediCase (students)</a></li>
+                        <li><a href="https://training-app-production-508c.up.railway.app" target="_blank">MediCase (students)</a></li>
                         <li><a href="#bespoke">Bespoke Development</a></li>
                     </ul>
                 </div>
