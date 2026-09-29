@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outpatient Connects | Auxtechna</title>
-    <meta name="description" content="Electronic NHS outpatient prescribing: sign once at prescribing, route each medicine to its most cost-effective supply channel over national NHS EPS or hospital pharmacy, with a built-in pharmacist clinical check.">
+    <meta name="description" content="Electronic NHS outpatient prescribing: sign once at prescribing, route each medicine to its most cost-effective supply channel, community or hospital pharmacy, with a built-in pharmacist clinical check.">
     <link rel="icon" type="image/png" href="/images/auxtechna-logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -87,8 +87,8 @@
         <p>
             A purpose-built platform for NHS outpatient medicines: prescribe from a wide dm+d formulary,
             sign once at the point of prescribing, and send each medicine down its most cost-effective supply
-            route - the patient's community pharmacy over national NHS EPS, or the hospital's own pharmacy
-            - with a pharmacist clinical check built in.
+            route (the patient's community pharmacy or the hospital's own pharmacy), with a pharmacist
+            clinical check built in. Built for NHS EPS, currently going through NHS onboarding.
         </p>
         <a href="/#contact" class="btn">Request a demonstration</a>
     </div>
@@ -102,7 +102,7 @@
         </div>
         <div class="grid">
             <div class="card"><div class="ic"><i class="bi bi-pen"></i></div><h5>Sign once, at prescribing</h5><p>The prescriber signs at the point of prescribing with an advanced electronic signature; the content is SHA-256 locked, so it's tamper-evident from the moment it's created. No separate signing step.</p></div>
-            <div class="card"><div class="ic"><i class="bi bi-send-check"></i></div><h5>National NHS EPS routing</h5><p>Community-routed prescriptions transmit to the patient's nominated pharmacy over the national Electronic Prescription Service - built on the same CIS2 / PDS / FHIR foundations as HomeCare Connects.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-send-check"></i></div><h5>Built for NHS EPS</h5><p>Community prescriptions are built to go to the patient's nominated pharmacy over the national Electronic Prescription Service, on the same PDS and FHIR foundations as HomeCare Connects. EPS is going through NHS onboarding.</p></div>
             <div class="card"><div class="ic"><i class="bi bi-cash-coin"></i></div><h5>Cost-effective supply routing</h5><p>A pricing engine compares the real cost of each supply route - national Drug Tariff for the community, the trust's own contract prices for the hospital pharmacy - and recommends the cheapest, showing the pounds saved on every prescription.</p></div>
             <div class="card"><div class="ic"><i class="bi bi-capsule"></i></div><h5>Generic-first, wider formulary</h5><p>Prescribe generically from a wide dm+d-backed formulary (substance &rarr; strength &rarr; form), with brand an optional pick. Each site chooses its formulary mode: its own curated list, the full dm+d catalogue, or a hybrid.</p></div>
             <div class="card"><div class="ic"><i class="bi bi-clipboard2-check"></i></div><h5>Pharmacist clinical check</h5><p>A pharmacist reviews the prescription and passes-and-sends in one action, or sends it back to the prescriber with a query. The prescriber can amend and re-sign in place - a clean, closed loop with no paper.</p></div>
@@ -110,9 +110,9 @@
             <div class="card"><div class="ic"><i class="bi bi-graph-up-arrow"></i></div><h5>Titration &amp; dose escalation</h5><p>Structured dose-escalation schedules for drugs that titrate - each step's dose, frequency and duration held against the drug, so an escalating regimen is prescribed faithfully rather than as free text.</p></div>
             <div class="card"><div class="ic"><i class="bi bi-arrow-repeat"></i></div><h5>Repeat medicines</h5><p>A patient repeat-medicines list with a specialty-scoped worklist that shows what's due - overdue and soonest first - and re-issues a fresh, signed prescription in a click.</p></div>
             <div class="card"><div class="ic"><i class="bi bi-clipboard2-pulse"></i></div><h5>Prescribe by diagnosis</h5><p>Curated order sets tied to a diagnosis drop a whole bundle of pre-configured drug lines into the prescription, editable before signing - faster, more consistent prescribing for common presentations.</p></div>
-            <div class="card"><div class="ic"><i class="bi bi-person-badge"></i></div><h5>NHS identity &amp; demographics</h5><p>Prescriber identity and MFA via NHS CIS2; patient demographics and registered GP verified from PDS. The people and the patient are who the record says they are.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-person-badge"></i></div><h5>NHS identity &amp; demographics</h5><p>Patient demographics and registered GP looked up from PDS. NHS CIS2 smartcard sign-in for prescribers is built and going through NHS onboarding.</p></div>
             <div class="card"><div class="ic"><i class="bi bi-hospital"></i></div><h5>Multi-specialty, per-consultant</h5><p>Prescribing organisation ODS per specialty, per-specialty days-supply defaults, and specialty-scoped repeats and workflow filters - each clinic sees and manages its own patients.</p></div>
-            <div class="card"><div class="ic"><i class="bi bi-bag-check"></i></div><h5>Hospital dispensing workflow</h5><p>Medicines routed to the hospital's own pharmacy land in a dispensing worklist, so non-EPS supply is tracked to completion alongside the community prescriptions - one view of the whole outpatient supply picture.</p></div>
+            <div class="card"><div class="ic"><i class="bi bi-bag-check"></i></div><h5>Hospital dispensing workflow</h5><p>Medicines routed to the hospital's own pharmacy land in a dispensing worklist, so hospital supply is tracked to completion alongside the community prescriptions - one view of the whole outpatient supply picture.</p></div>
         </div>
     </div>
 </section>
@@ -124,7 +124,7 @@
             <li><strong>Prescribe</strong> from the formulary (generic-first), with dose, quantity or days, and the cheapest supply route suggested automatically.</li>
             <li><strong>Sign once</strong> - the prescription is AES-signed and locked at the click.</li>
             <li><strong>Clinical check</strong> - a pharmacist reviews and passes it, or sends it back for amendment.</li>
-            <li><strong>Route &amp; supply</strong> - community items transmit over NHS EPS to the nominated pharmacy; hospital items drop into the dispensing worklist.</li>
+            <li><strong>Route &amp; supply</strong> - community items are routed to the patient's pharmacy (over NHS EPS once onboarding completes); hospital items drop into the dispensing worklist.</li>
         </ol>
     </div>
 </section>
