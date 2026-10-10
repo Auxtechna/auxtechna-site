@@ -1,0 +1,68 @@
+# Which homepage "/" serves is decided by the platform (Platform Admin > Company homepage).
+# nginx asks https://${SITE_MODE_HOST}/site-mode/check, which answers 200 with an
+# X-Site-Mode header of "nhs" or "general". Anything else, including the platform being
+# unreachable, serves the original index.html. The answer is cached for 15 seconds.
+
+proxy_cache_path /tmp/sitemode levels=1 keys_zone=sitemode:1m max_size=1m inactive=10m;
+
+map $site_mode $site_page {
+    default  /index.html;
+    general  /apexsail-studio.html;
+}
+
+server {
+    listen 8080;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    resolver 1.1.1.1 8.8.8.8 valid=60s ipv6=off;
+
+    # Internal probe of the platform. Never reachable from outside.
+    location = /_site_mode {
+        internal;
+        set $site_mode_url https://${SITE_MODE_HOST}/site-mode/check;
+        proxy_pass $site_mode_url;
+        proxy_ssl_server_name on;
+        proxy_set_header Host ${SITE_MODE_HOST};
+        proxy_pass_request_body off;
+        proxy_set_header Content-Length "";
+        proxy_connect_timeout 2s;
+        proxy_read_timeout 2s;
+        proxy_cache sitemode;
+        proxy_cache_key "site-mode";
+        proxy_cache_valid 200 15s;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_ignore_headers Cache-Control Expires Set-Cookie;
+    }
+
+    # The front door. Serves the page the platform's switch selects.
+    location = / {
+        auth_request /_site_mode;
+        auth_request_set $site_mode $upstream_http_x_site_mode;
+        error_page 401 403 500 502 503 504 = @nhs_home;
+        add_header Cache-Control "no-cache" always;
+        try_files $site_page =404;
+    }
+
+    location @nhs_home {
+        add_header Cache-Control "no-cache" always;
+        try_files /index.html =404;
+    }
+
+    # Reached by its own address, the general page is not indexed. At "/" it is.
+    location = /apexsail-studio.html {
+        add_header X-Robots-Tag "noindex" always;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Health check
+    location /health {
+        return 200 'ok';
+        add_header Content-Type text/plain;
+    }
+}
