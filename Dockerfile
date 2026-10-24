@@ -2,6 +2,7 @@ FROM nginx:alpine
 COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 COPY index.html /usr/share/nginx/html/index.html
 COPY outpatient-connects.html /usr/share/nginx/html/outpatient-connects.html
+COPY sitemap.xml robots.txt /usr/share/nginx/html/
 COPY apexsail-studio.html /usr/share/nginx/html/apexsail-studio.html
 COPY images/ /usr/share/nginx/html/images/
 ENV PORT=8080
